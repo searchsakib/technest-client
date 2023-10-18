@@ -31,8 +31,8 @@ const AddProduct = () => {
       <div>
         <div className="mx-auto max-w-xl">
           <form onSubmit={handleAddProduct} className="space-y-5">
-            <div className="grid grid-cols-12 gap-8">
-              <div className="col-span-6">
+            <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -46,7 +46,7 @@ const AddProduct = () => {
                   name="name"
                 />
               </div>
-              <div className="col-span-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example8"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -60,7 +60,7 @@ const AddProduct = () => {
                   name="brand"
                 />
               </div>
-              <div className="col-span-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -74,7 +74,7 @@ const AddProduct = () => {
                   name="type"
                 />
               </div>
-              <div className="col-span-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -88,7 +88,7 @@ const AddProduct = () => {
                   name="price"
                 />
               </div>
-              <div className="col-span-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -102,7 +102,7 @@ const AddProduct = () => {
                   name="description"
                 />
               </div>
-              <div className="col-span-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -118,7 +118,7 @@ const AddProduct = () => {
                   max="5"
                 />
               </div>
-              <div className="col-span-12">
+              <div className="col-span-1 md:col-span-12 lg:col-span-12">
                 <label
                   htmlFor="example7"
                   className="mb-1 block text-sm font-medium text-gray-700"
@@ -132,10 +132,10 @@ const AddProduct = () => {
                   name="image"
                 />
               </div>
-              <div className="col-span-12">
+              <div className="col-span-1 md:col-span-12 lg:col-span-12">
                 <input
                   type="submit"
-                  className="btn btn-block hover:bg-white hover:text-black bg-[#3B3B3B] text-white"
+                  className="btn btn-block hover:bg-orange-100 hover:outline hover:text-black bg-[#3B3B3B] text-white"
                   value="Add Product"
                 />
               </div>
