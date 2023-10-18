@@ -70,7 +70,7 @@ const NavBar = () => {
     <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-[1320px] mx-auto">
       <div>
         <Link>
-          <h2 className="font-bold bg-orange-500 text-2xl font-serif p-[6px] text-white rounded-lg">
+          <h2 className="font-bold bg-orange-500 text-2xl font-serif p-2 text-white rounded-xl">
             TechNest
           </h2>
         </Link>

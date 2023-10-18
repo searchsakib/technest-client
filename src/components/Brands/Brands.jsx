@@ -1,7 +1,7 @@
 const Brands = () => {
   return (
-    <div>
-      <h2>This is Brands</h2>
+    <div className="max-w-[1320px] mx-auto rounded-2xl bg-green-200 h-[576px] mt-[100px]">
+      <h2 className="text-4xl text-center pt-16">This is Brands</h2>
     </div>
   );
 };
