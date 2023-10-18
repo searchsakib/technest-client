@@ -1,12 +1,13 @@
 import Banner from '../../components/Banner/Banner';
+import Brands from '../../components/Brands/Brands';
 
 const Home = () => {
   return (
     <div className="pb-[100px] overflow-x-hidden">
       <Banner></Banner>
-      {/* <div>
-        <Services></Services>
-      </div> */}
+      <div>
+        <Brands></Brands>
+      </div>
       {/* <div>
         <Review></Review>
       </div> */}
