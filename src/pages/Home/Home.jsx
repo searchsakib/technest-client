@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner/Banner';
 import Brands from '../../components/Brands/Brands';
+import Features from '../../components/Features/Features';
 
 const Home = () => {
   return (
@@ -8,9 +9,9 @@ const Home = () => {
       <div>
         <Brands></Brands>
       </div>
-      {/* <div>
-        <Review></Review>
-      </div> */}
+      <div>
+        <Features></Features>
+      </div>
       {/* <div>
         <Faqs></Faqs>
       </div> */}
