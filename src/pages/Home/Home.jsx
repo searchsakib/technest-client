@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner/Banner';
 import Brands from '../../components/Brands/Brands';
+import Contact from '../../components/Contact/Contact';
 import Features from '../../components/Features/Features';
 
 const Home = () => {
@@ -12,9 +13,9 @@ const Home = () => {
       <div>
         <Features></Features>
       </div>
-      {/* <div>
-        <Faqs></Faqs>
-      </div> */}
+      <div>
+        <Contact></Contact>
+      </div>
     </div>
   );
 };
