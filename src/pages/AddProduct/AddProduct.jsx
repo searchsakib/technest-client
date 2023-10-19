@@ -1,5 +1,8 @@
+import Swal from 'sweetalert2';
+import axios from 'axios';
+
 const AddProduct = () => {
-  const handleAddProduct = (e) => {
+  const handleAddProduct = async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -22,6 +25,27 @@ const AddProduct = () => {
       image,
     };
     console.log(newProduct);
+
+    // send data
+
+    const res = await axios.post(
+      'https://technest-server-q7xpjlvmo-randomguys-projects.vercel.app/products',
+      newProduct,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    console.log(res.data);
+    if (res.data.insertedId) {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Product Added Successfully',
+        icon: 'success',
+        confirmButtonText: 'Okay',
+      });
+    }
   };
   return (
     <div className="bg-[#F4F3F0] p-16 mb-[100px]">

@@ -6,6 +6,7 @@ import MyCart from '../pages/MyCart/MyCart';
 import Login from '../pages/Login/Login';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import InsideBrand from '../components/InsideBrand/InsideBrand';
+import Register from '../pages/Register/Register';
 
 const myRoute = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const myRoute = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
       },
       {
         path: '/inside-brand/:id',
