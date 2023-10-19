@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // import { AuthContext } from '../providers/AuthProvider';
 // import { useContext, useState } from 'react';
 // import { updateProfile } from 'firebase/auth';
-// import swal from 'sweetalert';
+// import Swal from 'sweetalert2';
 
 const Register = () => {
   // const { createUser } = useContext(AuthContext);
@@ -39,12 +39,20 @@ const Register = () => {
   //   createUser(email, password, name, photo)
   //     .then((result) => {
   //       console.log(result.user);
+  // Swal.fire({
+  //   title: 'Success!',
+  //   text: 'Product Added Successfully',
+  //   icon: 'success',
+  //   confirmButtonText: 'Okay',
+  // });
+
   //       swal({
   //         title: 'Registration Successfull!',
   //         text: 'You Registered Successfully.',
   //         timer: 1200,
   //         buttons: false,
   //       });
+
   //       navigate('/');
   //       updateProfile(result.user, {
   //         displayName: name,

@@ -4,7 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 // import { AuthContext } from '../providers/AuthProvider';
 // import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 // import app from '../Firebase/firebase.config';
-// import swal from 'sweetalert';
+// import Swal from 'sweetalert2';
 
 const Login = () => {
   // const { signIn } = useContext(AuthContext);
@@ -21,12 +21,20 @@ const Login = () => {
   //     .then((result) => {
   //       const user = result.user;
   //       console.log(user);
+  // Swal.fire({
+  //   title: 'Success!',
+  //   text: 'Product Added Successfully',
+  //   icon: 'success',
+  //   confirmButtonText: 'Okay',
+  // });
+
   //       swal({
   //         title: 'Login Successfull!',
   //         text: 'You Logged in Successfully.',
   //         timer: 1200,
   //         buttons: false,
   //       });
+
   //       navigate(location?.state ? location.state : '/');
   //     })
   //     .catch((err) => {
@@ -45,6 +53,13 @@ const Login = () => {
   //   signIn(email, password)
   //     .then((res) => {
   //       console.log(res.user);
+
+  // Swal.fire({
+  //   title: 'Success!',
+  //   text: 'Product Added Successfully',
+  //   icon: 'success',
+  //   confirmButtonText: 'Okay',
+  // });
 
   //       swal({
   //         title: 'Login Successfull!',
