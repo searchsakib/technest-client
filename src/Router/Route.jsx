@@ -8,6 +8,7 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import InsideBrand from '../components/InsideBrand/InsideBrand';
 import Register from '../pages/Register/Register';
 import UpdateProduct from '../components/UpdateProduct/UpdateProduct';
+import DetailsProduct from '../components/DetailsProduct/DetailsProduct';
 
 const myRoute = createBrowserRouter([
   {
@@ -43,6 +44,12 @@ const myRoute = createBrowserRouter([
       {
         path: '/update-product/:id',
         element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(`https://technest-server.vercel.app/products/${params.id}`),
+      },
+      {
+        path: '/details-product/:id',
+        element: <DetailsProduct></DetailsProduct>,
         loader: ({ params }) =>
           fetch(`https://technest-server.vercel.app/products/${params.id}`),
       },

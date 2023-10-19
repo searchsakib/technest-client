@@ -53,7 +53,7 @@ const Cards = ({ myProduct }) => {
         </div>
         <div className="flex items-center justify-center gap-10">
           <div className="card-actions justify-center mt-2">
-            <Link to="{`/service-details/${id}`}">
+            <Link to={`/details-product/${_id}`}>
               <button className="btn bg-orange-500 text-white hover:text-orange-500 hover:bg-blue-50 hover:border-2 hover:border-orange-500">
                 Details
               </button>
