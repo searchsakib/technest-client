@@ -29,7 +29,7 @@ const AddProduct = () => {
     // send data
 
     const res = await axios.post(
-      'https://technest-server-q7xpjlvmo-randomguys-projects.vercel.app/products',
+      'https://technest-server.vercel.app/products',
       newProduct,
       {
         headers: {
