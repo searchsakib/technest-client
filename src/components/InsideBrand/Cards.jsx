@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const Cards = ({ myProduct }) => {
-  const { name, brand, type, price, description, rating, image } =
+  const { _id, name, brand, type, price, description, rating, image } =
     myProduct || {};
 
   return (
@@ -60,7 +60,7 @@ const Cards = ({ myProduct }) => {
             </Link>
           </div>
           <div className="card-actions justify-center mt-2">
-            <Link to="{`/service-details/${id}`}">
+            <Link to={`/update-product/${_id}`}>
               <button className="btn bg-orange-500 text-white hover:text-orange-500 hover:bg-blue-50 hover:border-2 hover:border-orange-500">
                 Update
               </button>
