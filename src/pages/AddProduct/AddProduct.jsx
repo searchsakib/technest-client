@@ -46,6 +46,7 @@ const AddProduct = () => {
         confirmButtonText: 'Okay',
       });
     }
+    form.reset();
   };
   return (
     <div className="bg-[#F4F3F0] p-16 mb-[100px]">
