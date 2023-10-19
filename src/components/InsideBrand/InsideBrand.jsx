@@ -5,14 +5,19 @@ import InsideBrandDetails from './InsideBrandDetails';
 const InsideBrand = () => {
   const [insideBrand, setInsideBrand] = useState([]);
 
-  const { id } = useParams();
+  const { brand_name } = useParams();
 
   const insideBrandFetched = useLoaderData();
 
   useEffect(() => {
-    const findBrand = insideBrandFetched?.find((theBrand) => theBrand.id == id);
+    // console.log('insideBrandFetched: ', insideBrandFetched);
+    const findBrand = insideBrandFetched?.find(
+      (theBrand) => theBrand.brand_name === brand_name
+    );
+    // console.log('brand_name: ', brand_name);
+    // console.log('findBrand: ', findBrand);
     setInsideBrand(findBrand);
-  }, [id, insideBrandFetched]);
+  }, [brand_name, insideBrandFetched]);
 
   return (
     <div>

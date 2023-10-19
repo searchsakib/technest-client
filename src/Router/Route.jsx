@@ -35,7 +35,7 @@ const myRoute = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/inside-brand/:id',
+        path: '/inside-brand/:brand_name',
         element: <InsideBrand></InsideBrand>,
         loader: () => fetch('/brands.json'),
       },

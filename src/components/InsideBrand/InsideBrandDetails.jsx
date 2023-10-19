@@ -1,5 +1,5 @@
 const InsideBrandDetails = ({ insideBrand }) => {
-  const { id, brand_image, brand_name } = insideBrand || {};
+  const { brand_image, brand_name } = insideBrand || {};
 
   return (
     <div className="max-w-[1320px] mx-auto">
