@@ -68,6 +68,7 @@ const AddProduct = () => {
                   className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Name"
                   name="name"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
@@ -82,6 +83,7 @@ const AddProduct = () => {
                   className="bloc p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Brand Name"
                   name="brand"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
@@ -96,6 +98,7 @@ const AddProduct = () => {
                   className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Type"
                   name="type"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
@@ -110,6 +113,7 @@ const AddProduct = () => {
                   className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Price"
                   name="price"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
@@ -124,6 +128,7 @@ const AddProduct = () => {
                   className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Short Description"
                   name="description"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
@@ -140,6 +145,7 @@ const AddProduct = () => {
                   name="rating"
                   min="1"
                   max="5"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-12 lg:col-span-12">
@@ -161,6 +167,7 @@ const AddProduct = () => {
                   type="submit"
                   className="btn btn-block hover:bg-orange-100 hover:outline hover:text-black bg-[#3B3B3B] text-white"
                   value="Add Product"
+                  required
                 />
               </div>
             </div>

@@ -1,21 +1,73 @@
+import { Link } from 'react-router-dom';
+
 const Cards = ({ myProduct }) => {
   const { name, brand, type, price, description, rating, image } =
     myProduct || {};
 
   return (
-    <div className="py-8">
-      <div className="bg-green-200 p-4">
-        <img
-          src={image}
-          alt={name}
-          className="w-40 h-40 object-cover mx-auto"
-        />
-        <h3 className="text-xl font-semibold text-center mt-4">{name}</h3>
-        <p className="text-center text-gray-600 capitalize">Brand: {brand}</p>
-        <p className="text-center text-gray-600">Type: {type}</p>
-        <p className="text-center text-gray-600">Price: {price}</p>
-        <p className="text-center text-gray-600">Description: {description}</p>
-        <p className="text-center text-gray-600">Rating: {rating}</p>
+    <div className="card bg-base-100 shadow-xl ">
+      <figure>
+        <img src={image} alt="pics" />
+      </figure>
+      <div className="card-body text-center bg-orange-100">
+        <h2 className="card-title mx-auto font-bold capitalize">
+          <span className="font-normal">Name :</span> {name}{' '}
+        </h2>
+        <h2 className="card-title mx-auto font-bold capitalize">
+          <span className="font-normal">Brand :</span> {brand}{' '}
+        </h2>
+        <p className="m-2 text-xl capitalize font-medium">
+          <span className="font-normal">Type :</span> {type}{' '}
+        </p>
+        <p className="font-semibold text-lg">Price: {price}$ </p>
+        {/* {rating} */}
+        <p className="font-semibold text-lg">
+          <span className="mr-2">Rating:</span>
+          <div className="rating rating-sm">
+            <input
+              type="radio"
+              name="rating-6"
+              className="mask mask-star-2 bg-orange-400"
+            />
+            <input
+              type="radio"
+              name="rating-6"
+              className="mask mask-star-2 bg-orange-400"
+              checked
+            />
+            <input
+              type="radio"
+              name="rating-6"
+              className="mask mask-star-2 bg-orange-400"
+            />
+            <input
+              type="radio"
+              name="rating-6"
+              className="mask mask-star-2 bg-orange-400"
+            />
+            <input
+              type="radio"
+              name="rating-6"
+              className="mask mask-star-2 bg-orange-400"
+            />
+          </div>
+        </p>
+        <div className="flex items-center justify-center gap-10">
+          <div className="card-actions justify-center mt-2">
+            <Link to="{`/service-details/${id}`}">
+              <button className="btn bg-orange-500 text-white hover:text-orange-500 hover:bg-blue-50 hover:border-2 hover:border-orange-500">
+                Details
+              </button>
+            </Link>
+          </div>
+          <div className="card-actions justify-center mt-2">
+            <Link to="{`/service-details/${id}`}">
+              <button className="btn bg-orange-500 text-white hover:text-orange-500 hover:bg-blue-50 hover:border-2 hover:border-orange-500">
+                Update
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
