@@ -21,7 +21,7 @@ const Cards = ({ myProduct }) => {
         </p>
         <p className="font-semibold text-lg">Price: {price}$ </p>
         {/* {rating} */}
-        <p className="font-semibold text-lg">
+        <div className="font-semibold text-lg">
           <span className="mr-2">Rating:</span>
           <div className="rating rating-sm">
             <input
@@ -33,7 +33,6 @@ const Cards = ({ myProduct }) => {
               type="radio"
               name="rating-6"
               className="mask mask-star-2 bg-orange-400"
-              checked
             />
             <input
               type="radio"
@@ -51,7 +50,7 @@ const Cards = ({ myProduct }) => {
               className="mask mask-star-2 bg-orange-400"
             />
           </div>
-        </p>
+        </div>
         <div className="flex items-center justify-center gap-10">
           <div className="card-actions justify-center mt-2">
             <Link to="{`/service-details/${id}`}">
