@@ -4,7 +4,7 @@ const BrandCard = ({ myBrand }) => {
   const { id, brand_image, brand_name } = myBrand || {};
   return (
     <div>
-      <Link>
+      <Link to={`/inside-brand/${id}`}>
         <div className="bg-white rounded-2xl">
           <div className="max-w-[150px] mx-auto">
             <img src={brand_image} alt="Shoes" className="rounded-xl" />

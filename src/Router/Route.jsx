@@ -5,6 +5,7 @@ import AddProduct from '../pages/AddProduct/AddProduct';
 import MyCart from '../pages/MyCart/MyCart';
 import Login from '../pages/Login/Login';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
+import InsideBrand from '../components/InsideBrand/InsideBrand';
 
 const myRoute = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const myRoute = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>,
+      },
+      {
+        path: '/inside-brand/:id',
+        element: <InsideBrand></InsideBrand>,
+        loader: () => fetch('/brands.json'),
       },
     ],
   },
