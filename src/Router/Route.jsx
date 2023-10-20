@@ -9,6 +9,7 @@ import InsideBrand from '../components/InsideBrand/InsideBrand';
 import Register from '../pages/Register/Register';
 import UpdateProduct from '../components/UpdateProduct/UpdateProduct';
 import DetailsProduct from '../components/DetailsProduct/DetailsProduct';
+import PrivateRoute from './PrivateRoute';
 
 const myRoute = createBrowserRouter([
   {
@@ -22,11 +23,19 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/add-product',
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/cart',
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
         loader: () => fetch('https://technest-server.vercel.app/cart'),
       },
       {
@@ -44,13 +53,21 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/update-product/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://technest-server.vercel.app/products/${params.id}`),
       },
       {
         path: '/details-product/:id',
-        element: <DetailsProduct></DetailsProduct>,
+        element: (
+          <PrivateRoute>
+            <DetailsProduct></DetailsProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://technest-server.vercel.app/products/${params.id}`),
       },
