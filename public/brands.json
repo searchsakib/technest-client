@@ -2,34 +2,22 @@
   {
     "id": 1,
     "brand_image": "https://i.ibb.co/2jhZTnr/samsung.png",
-    "brand_name": "samsung",
-    "img1": "https://i.ibb.co/8smykHt/sa1.jpg",
-    "img2": "https://i.ibb.co/YtfTbVN/sa2.jpg",
-    "img3": "https://i.ibb.co/x67psDV/sa3.jpg"
+    "brand_name": "samsung"
   },
   {
     "id": 2,
     "brand_image": "https://i.ibb.co/Lt0SKZX/asus.png",
-    "brand_name": "asus",
-    "img1": "https://i.ibb.co/w7cyrv2/asusad1.jpg",
-    "img2": "https://i.ibb.co/Hr9FvmS/asusad2.jpg",
-    "img3": "https://i.ibb.co/9yY9x7p/asusad3.jpg"
+    "brand_name": "asus"
   },
   {
     "id": 3,
     "brand_image": "https://i.ibb.co/jfvgJJP/apple.png",
-    "brand_name": "apple",
-    "img1": "https://i.ibb.co/T8Bk6JZ/ad1.jpg",
-    "img2": "https://i.ibb.co/sCTDVKr/ad2.jpg",
-    "img3": "https://i.ibb.co/VvKHMdQ/ad3.jpg"
+    "brand_name": "apple"
   },
   {
     "id": 4,
     "brand_image": "https://i.ibb.co/hVZSk2m/lenovo.png",
-    "brand_name": "lenovo",
-    "img1": "https://i.ibb.co/42nVw4n/lad1.jpg",
-    "img2": "https://i.ibb.co/611QM8Y/lad2.jpg",
-    "img3": "https://i.ibb.co/LJN0PZR/lad3.jpg"
+    "brand_name": "lenovo"
   },
   {
     "id": 5,
@@ -39,9 +27,6 @@
   {
     "id": 6,
     "brand_image": "https://i.ibb.co/PCCJ9Gn/google.png",
-    "brand_name": "google",
-    "img1": "https://i.ibb.co/9GYKZVn/gad1.jpg",
-    "img2": "https://i.ibb.co/N6GBJy9/gad2.jpg",
-    "img3": "https://i.ibb.co/gtx2c6y/gad3.jpg"
+    "brand_name": "google"
   }
 ]
