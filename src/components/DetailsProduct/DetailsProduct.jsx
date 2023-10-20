@@ -1,8 +1,42 @@
+import Swal from 'sweetalert2';
+import axios from 'axios';
+
 import { useLoaderData } from 'react-router';
 const DetailsProduct = () => {
   const product = useLoaderData();
   const { _id, name, brand, type, price, description, rating, image } =
     product || {};
+  const newCart = {
+    name,
+    brand,
+    type,
+    price,
+    description,
+    rating,
+    image,
+  };
+
+  const handleAddToCart = async () => {
+    const res = await axios.post(
+      'https://technest-server.vercel.app/cart',
+      newCart,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    console.log(res.data);
+    if (res.data.insertedId) {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Product Added to Cart',
+        icon: 'success',
+        confirmButtonText: 'Okay',
+      });
+    }
+  };
+
   return (
     <div className="max-w-[1320px] mx-auto">
       <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 mt-6 px-6 md:px-10 lg:px-10 xl:px-0 mb-20">
@@ -21,8 +55,11 @@ const DetailsProduct = () => {
             className="absolute lg:bottom-8 lg:left-0 md:bottom-4 md:left-0 
           bottom-1 left-3 right-0 flex items-center justify-start h-16 "
           >
-            <button className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium">
-              Booking {price}
+            <button
+              onClick={handleAddToCart}
+              className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium hover:bg-orange-800 hover:text-white"
+            >
+              Add to Cart {price}$
             </button>
 
             <div className="p-10 mb-32 hidden md:block">
@@ -30,7 +67,10 @@ const DetailsProduct = () => {
                 <h5 className="mb-2 block text-3xl text-white pt-9 pb-2 font-bold leading-snug tracking-normal antialiased capitalize">
                   {name}
                 </h5>
-                <button className=" text-orange-600 font-semibold text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-white">
+                <button
+                  onClick={handleAddToCart}
+                  className=" text-orange-600 font-semibold text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-white hover:bg-orange-800 hover:text-white"
+                >
                   Add to Cart {price}$
                 </button>
               </div>
