@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../components/providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from '@firebase/auth';
 // import { useContext, useState } from 'react';
@@ -8,14 +8,15 @@ import Swal from 'sweetalert2';
 import app from '../../components/Firebase/firebase.config';
 
 const Login = () => {
-  // const { signIn } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
+
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // const [logError, setLogError] = useState('');
+  const [logError, setLogError] = useState('');
 
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
@@ -23,8 +24,8 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         Swal.fire({
-          title: 'Success!',
-          text: 'Product Added Successfully',
+          title: 'Login Successfull!',
+          text: 'You Logged in Successfully.',
           icon: 'success',
           confirmButtonText: 'Okay',
         });
@@ -36,8 +37,6 @@ const Login = () => {
       });
   };
 
-  const { signIn } = useContext(AuthContext);
-
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
@@ -45,58 +44,36 @@ const Login = () => {
     const email = form.get('email');
     const password = form.get('password');
     console.log(email, password);
+
+    setLogError('');
+
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+
+        Swal.fire({
+          title: 'Login Successfull!',
+          text: 'You Logged in Successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay',
+        });
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => {
         console.error(error);
+        setLogError(error.message);
       });
   };
-
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-  //   const form = new FormData(e.currentTarget);
-  //   const email = form.get('email');
-  //   const password = form.get('password');
-
-  //   setLogError('');
-
-  //   signIn(email, password)
-  //     .then((res) => {
-  //       console.log(res.user);
-
-  // Swal.fire({
-  //   title: 'Success!',
-  //   text: 'Product Added Successfully',
-  //   icon: 'success',
-  //   confirmButtonText: 'Okay',
-  // });
-
-  //       swal({
-  //         title: 'Login Successfull!',
-  //         text: 'You Logged in Successfully.',
-  //         timer: 1200,
-  //         buttons: false,
-  //       });
-
-  //       navigate(location?.state ? location.state : '/');
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //       setLogError(err.message);
-  //     });
-  // };
 
   return (
     <div className="pt-[60px] pb-[76px] bg-gray-100 overflow-x-hidden">
       <div className="mx-auto w-5/12 min-w-fit ">
         <h2 className="text-3xl font-medium my-5 text-center">Login Here</h2>
-        {/* {logError && (
+        {logError && (
           <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto">
             <p> {logError} </p>
           </div>
-        )} */}
+        )}
 
         <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
