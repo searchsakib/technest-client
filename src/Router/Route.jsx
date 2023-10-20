@@ -25,8 +25,9 @@ const myRoute = createBrowserRouter([
         element: <AddProduct></AddProduct>,
       },
       {
-        path: '/my-cart',
+        path: '/cart',
         element: <MyCart></MyCart>,
+        loader: () => fetch('https://technest-server.vercel.app/cart'),
       },
       {
         path: '/login',
