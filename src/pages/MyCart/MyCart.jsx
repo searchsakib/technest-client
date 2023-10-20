@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router';
 import axios from 'axios';
-// import CartCard from './CartCard';
 
 const MyCart = () => {
   const loadedCart = useLoaderData();

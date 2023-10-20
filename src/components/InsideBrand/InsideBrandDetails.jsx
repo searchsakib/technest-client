@@ -29,6 +29,11 @@ const InsideBrandDetails = ({ insideBrand }) => {
 
   return (
     <div className="max-w-[1320px] mx-auto">
+      <div>
+        {/* {theProduct.map((product) => (
+          <div key={product._id}></div>
+        ))} */}
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 px-5 md:px-5 lg:px-0 my-20">
         {theProduct.map((product) => (
           <Cards key={product._id} myProduct={product} />
