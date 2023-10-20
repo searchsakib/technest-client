@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../components/providers/AuthProvider';
 // import { AuthContext } from '../providers/AuthProvider';
 // import { useContext, useState } from 'react';
 // import { updateProfile } from 'firebase/auth';
 // import Swal from 'sweetalert2';
 
 const Register = () => {
-  // const { createUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
+
   // const navigate = useNavigate();
 
   // const [regError, setRegError] = useState('');
@@ -20,6 +23,15 @@ const Register = () => {
     const email = form.get('email');
     const password = form.get('password');
     console.log(name, photo, email, password);
+
+    //create user
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
     // setRegError('');
 

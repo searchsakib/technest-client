@@ -1,5 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { useContext } from 'react';
+import { AuthContext } from '../../components/providers/AuthProvider';
 // import { useContext, useState } from 'react';
 // import { AuthContext } from '../providers/AuthProvider';
 // import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
@@ -41,6 +43,24 @@ const Login = () => {
   //       console.log('error', err.message);
   //     });
   // };
+
+  const { signIn } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+    console.log(email, password);
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   // const handleLogin = (e) => {
   //   e.preventDefault();
@@ -85,8 +105,8 @@ const Login = () => {
             <p> {logError} </p>
           </div>
         )} */}
-        {/* onSubmit={handleLogin} */}
-        <form className="card-body">
+
+        <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text font-medium text-base">Email</span>
