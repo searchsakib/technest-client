@@ -2,47 +2,39 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { useContext } from 'react';
 import { AuthContext } from '../../components/providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from '@firebase/auth';
 // import { useContext, useState } from 'react';
-// import { AuthContext } from '../providers/AuthProvider';
-// import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-// import app from '../Firebase/firebase.config';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+import app from '../../components/Firebase/firebase.config';
 
 const Login = () => {
   // const { signIn } = useContext(AuthContext);
-  // const auth = getAuth(app);
-  // const provider = new GoogleAuthProvider();
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
   // const location = useLocation();
   // const navigate = useNavigate();
 
   // const [logError, setLogError] = useState('');
 
-  // const handleGoogleSignIn = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  // Swal.fire({
-  //   title: 'Success!',
-  //   text: 'Product Added Successfully',
-  //   icon: 'success',
-  //   confirmButtonText: 'Okay',
-  // });
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          title: 'Success!',
+          text: 'Product Added Successfully',
+          icon: 'success',
+          confirmButtonText: 'Okay',
+        });
 
-  //       swal({
-  //         title: 'Login Successfull!',
-  //         text: 'You Logged in Successfully.',
-  //         timer: 1200,
-  //         buttons: false,
-  //       });
-
-  //       navigate(location?.state ? location.state : '/');
-  //     })
-  //     .catch((err) => {
-  //       console.log('error', err.message);
-  //     });
-  // };
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch((err) => {
+        console.log('error', err.message);
+      });
+  };
 
   const { signIn } = useContext(AuthContext);
 
@@ -140,8 +132,11 @@ const Login = () => {
         <div>
           <p className="text-center font-normal text-xl">Or</p>
           <p className="text-center font-normal text-xl">Login With</p>
-          {/* onClick={handleGoogleSignIn} */}
-          <div className=" rounded-full h-fit w-fit bg-white mx-auto my-6">
+
+          <div
+            onClick={handleGoogleSignIn}
+            className=" rounded-full h-fit w-fit bg-white mx-auto my-6"
+          >
             <Link>
               <FcGoogle className="p-1" size={55}></FcGoogle>
             </Link>
