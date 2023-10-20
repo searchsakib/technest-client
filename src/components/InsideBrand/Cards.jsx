@@ -11,13 +11,13 @@ const Cards = ({ myProduct }) => {
       </figure>
       <div className="card-body text-center bg-orange-100">
         <h2 className="card-title mx-auto font-bold capitalize">
-          <span className="font-normal">Name :</span> {name}{' '}
+          <span className="font-normal">Name:</span> {name}{' '}
         </h2>
         <h2 className="card-title mx-auto font-bold capitalize">
-          <span className="font-normal">Brand :</span> {brand}{' '}
+          <span className="font-normal">Brand:</span> {brand}{' '}
         </h2>
         <p className="m-2 text-xl capitalize font-medium">
-          <span className="font-normal">Type :</span> {type}{' '}
+          <span className="font-normal">Type:</span> {type}{' '}
         </p>
         <p className="font-semibold text-lg">Price: {price}$ </p>
         {/* {rating} */}

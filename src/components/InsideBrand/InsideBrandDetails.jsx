@@ -30,7 +30,7 @@ const InsideBrandDetails = ({ insideBrand }) => {
   }, [myProducts, brand_name]);
 
   return (
-    <div className="max-w-[1320px] mx-auto">
+    <div className="max-w-[1320px] mx-auto ">
       <div className="w-full mx-auto ">
         <Carousel
           autoPlay
@@ -40,8 +40,12 @@ const InsideBrandDetails = ({ insideBrand }) => {
           interval={2000}
         >
           {theProduct.map((product) => (
-            <div key={product._id} className="relative">
-              <img src={product.image} alt="" />
+            <div key={product._id} className="relative ">
+              <img
+                className="h-[200px] md:h-[450px] lg:h-[550px]"
+                src={product.image}
+                alt=""
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-20 md:h-40 lg:h-40 bg-black opacity-70 flex items-center justify-center">
                   <div className="text-orange-300 text-center">
