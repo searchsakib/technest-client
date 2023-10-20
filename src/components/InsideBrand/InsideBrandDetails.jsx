@@ -43,12 +43,14 @@ const InsideBrandDetails = ({ insideBrand }) => {
             <div key={product._id} className="relative">
               <img src={product.image} alt="" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-40 bg-black opacity-70 flex items-center justify-center">
-                  <div className="text-orange-300 text-4xl text-center">
-                    <p className="text-3xl font-bold capitalize">
+                <div className="w-full h-20 md:h-40 lg:h-40 bg-black opacity-70 flex items-center justify-center">
+                  <div className="text-orange-300 text-center">
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold capitalize pb-1 md:pb-2 lg:pb-3">
                       {product.name}
+                    </h2>
+                    <p className="text-base md:text-xl lg:text-2xl">
+                      Buy Now for Only {product.price}$
                     </p>
-                    <p>Buy Now for Only {product.price}$</p>
                   </div>
                 </div>
               </div>
