@@ -1,12 +1,29 @@
 import { Link, NavLink } from 'react-router-dom';
 import userPic from '/images/user.png';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
 
+  const [name, setName] = useState(null);
+  const [photo, setPhoto] = useState(null);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      if (user) {
+        setName(user.displayName);
+        setPhoto(user.photoURL);
+      }
+    }, 1100);
+
+    return () => clearTimeout(delay);
+  }, [user]);
+
   const handleSignOut = () => {
+    setName(null);
+    setPhoto(null);
+
     logOut().then().catch();
   };
 
@@ -89,10 +106,10 @@ const NavBar = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src={userPic} />
+            {photo ? <img src={photo} /> : <img src={userPic} />}
           </div>
         </label>
-        {/* {name && <p> {name} </p>} */}
+        {name && <p> {name} </p>}
 
         {user ? (
           <button onClick={handleSignOut} className="btn">
@@ -103,10 +120,6 @@ const NavBar = () => {
             <button className="btn">Login</button>
           </Link>
         )}
-
-        {/* <Link to="/login">
-          <button className="btn">Login</button>
-        </Link> */}
       </div>
     </div>
   );
