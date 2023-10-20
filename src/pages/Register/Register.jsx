@@ -10,67 +10,67 @@ const Register = () => {
 
   // const [regError, setRegError] = useState('');
 
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
-  //   // console.log(e.currentTarget);
-  //   const form = new FormData(e.currentTarget);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
 
-  //   const name = form.get('name');
-  //   const photo = form.get('photo');
-  //   const email = form.get('email');
-  //   const password = form.get('password');
-  //   // console.log(name, photo, email, password);
+    const name = form.get('name');
+    const photo = form.get('photo');
+    const email = form.get('email');
+    const password = form.get('password');
+    console.log(name, photo, email, password);
 
-  //   setRegError('');
+    // setRegError('');
 
-  //   if (password.length < 6) {
-  //     setRegError('Password should be at least 6 characters or longer');
-  //     return;
-  //   } else if (!/[A-Z]/.test(password)) {
-  //     setRegError(
-  //       'Your password should have at least one upper case characters'
-  //     );
-  //     return;
-  //   } else if (!/[#?!@$%^&*-]/.test(password)) {
-  //     setRegError('Your password should have at least one special characters');
-  //     return;
-  //   }
+    // if (password.length < 6) {
+    //   setRegError('Password should be at least 6 characters or longer');
+    //   return;
+    // } else if (!/[A-Z]/.test(password)) {
+    //   setRegError(
+    //     'Your password should have at least one upper case characters'
+    //   );
+    //   return;
+    // } else if (!/[#?!@$%^&*-]/.test(password)) {
+    //   setRegError('Your password should have at least one special characters');
+    //   return;
+    // }
 
-  //   createUser(email, password, name, photo)
-  //     .then((result) => {
-  //       console.log(result.user);
-  // Swal.fire({
-  //   title: 'Success!',
-  //   text: 'Product Added Successfully',
-  //   icon: 'success',
-  //   confirmButtonText: 'Okay',
-  // });
+    // createUser(email, password, name, photo)
+    //   .then((result) => {
+    //     console.log(result.user);
+    //     Swal.fire({
+    //       title: 'Success!',
+    //       text: 'Product Added Successfully',
+    //       icon: 'success',
+    //       confirmButtonText: 'Okay',
+    //     });
 
-  //       swal({
-  //         title: 'Registration Successfull!',
-  //         text: 'You Registered Successfully.',
-  //         timer: 1200,
-  //         buttons: false,
-  //       });
+    //     swal({
+    //       title: 'Registration Successfull!',
+    //       text: 'You Registered Successfully.',
+    //       timer: 1200,
+    //       buttons: false,
+    //     });
 
-  //       navigate('/');
-  //       updateProfile(result.user, {
-  //         displayName: name,
-  //         photoURL: photo,
-  //       })
-  //         .then((res) => {
-  //           console.log('profile updated', res);
-  //         })
+    //     navigate('/');
+    //     updateProfile(result.user, {
+    //       displayName: name,
+    //       photoURL: photo,
+    //     })
+    //       .then((res) => {
+    //         console.log('profile updated', res);
+    //       })
 
-  //         .catch((err) => {
-  //           console.log(err);
-  //         });
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //       setRegError(error.message);
-  //     });
-  // };
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //     setRegError(error.message);
+    //   });
+  };
 
   return (
     <div className="overflow-x-hidden">
@@ -84,8 +84,8 @@ const Register = () => {
               <p> {regError} </p>
             </div>
           )} */}
-          {/* onSubmit={handleRegister} */}
-          <form className="card-body">
+
+          <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-medium text-base">Name</span>
