@@ -1,17 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/providers/AuthProvider';
-// import { AuthContext } from '../providers/AuthProvider';
-// import { useContext, useState } from 'react';
-// import { updateProfile } from 'firebase/auth';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+import { updateProfile } from '@firebase/auth';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  // const navigate = useNavigate();
-
-  // const [regError, setRegError] = useState('');
+  const [regError, setRegError] = useState('');
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -24,64 +21,48 @@ const Register = () => {
     const password = form.get('password');
     console.log(name, photo, email, password);
 
+    setRegError('');
+
+    if (password.length < 6) {
+      setRegError('Password should be at least 6 characters or longer');
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegError(
+        'Your password should have at least one upper case characters'
+      );
+      return;
+    } else if (!/[#?!@$%^&*-]/.test(password)) {
+      setRegError('Your password should have at least one special characters');
+      return;
+    }
+
     //create user
-    createUser(email, password)
+    createUser(email, password, name, photo)
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          title: 'Registration Successfull!',
+          text: 'You Registered Successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay',
+        });
+        navigate('/');
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then((res) => {
+            console.log('profile updated', res);
+          })
+
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((error) => {
         console.error(error);
+        setRegError(error.message);
       });
-
-    // setRegError('');
-
-    // if (password.length < 6) {
-    //   setRegError('Password should be at least 6 characters or longer');
-    //   return;
-    // } else if (!/[A-Z]/.test(password)) {
-    //   setRegError(
-    //     'Your password should have at least one upper case characters'
-    //   );
-    //   return;
-    // } else if (!/[#?!@$%^&*-]/.test(password)) {
-    //   setRegError('Your password should have at least one special characters');
-    //   return;
-    // }
-
-    // createUser(email, password, name, photo)
-    //   .then((result) => {
-    //     console.log(result.user);
-    //     Swal.fire({
-    //       title: 'Success!',
-    //       text: 'Product Added Successfully',
-    //       icon: 'success',
-    //       confirmButtonText: 'Okay',
-    //     });
-
-    //     swal({
-    //       title: 'Registration Successfull!',
-    //       text: 'You Registered Successfully.',
-    //       timer: 1200,
-    //       buttons: false,
-    //     });
-
-    //     navigate('/');
-    //     updateProfile(result.user, {
-    //       displayName: name,
-    //       photoURL: photo,
-    //     })
-    //       .then((res) => {
-    //         console.log('profile updated', res);
-    //       })
-
-    //       .catch((err) => {
-    //         console.log(err);
-    //       });
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //     setRegError(error.message);
-    //   });
   };
 
   return (
@@ -91,11 +72,11 @@ const Register = () => {
           <h2 className="text-3xl font-medium my-5 text-center">
             Register Here
           </h2>
-          {/* {regError && (
+          {regError && (
             <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto">
               <p> {regError} </p>
             </div>
-          )} */}
+          )}
 
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
