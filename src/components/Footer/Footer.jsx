@@ -36,7 +36,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14 bg-orange-500 rounded-t-2xl">
+    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14 bg-orange-500 rounded-t-2xl md:rounded-2xl lg:rounded-2xl">
       <div>
         <Link>
           <h2 className="font-bold text-orange-500 bg-white text-2xl font-serif p-2 rounded-xl">

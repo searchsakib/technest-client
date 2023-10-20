@@ -21,7 +21,13 @@ const InsideBrand = () => {
 
   return (
     <div>
-      <InsideBrandDetails insideBrand={insideBrand}></InsideBrandDetails>
+      {brand_name === 'intel' ? (
+        <h2 className="text-5xl text-orange-500 text-center py-[200px]">
+          Intel Products Coming Soon.......
+        </h2>
+      ) : (
+        <InsideBrandDetails insideBrand={insideBrand}></InsideBrandDetails>
+      )}
     </div>
   );
 };
