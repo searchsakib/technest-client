@@ -5,7 +5,7 @@ import Features from '../../components/Features/Features';
 
 const Home = () => {
   return (
-    <div className="pb-[100px] overflow-x-hidden">
+    <div className="pb-[100px] pt-[100px] overflow-x-hidden">
       <Banner></Banner>
       <div className="p-4 md:p-5 lg:p-0">
         <Brands></Brands>

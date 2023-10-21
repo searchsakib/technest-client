@@ -10,7 +10,7 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-black rounded-md outline font-semibold p-2'
+              ? 'text-black outline font-semibold p-2'
               : 'text-black font-semibold'
           }
         >
@@ -25,7 +25,7 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-black rounded-md outline font-semibold p-2'
+              ? 'text-black outline font-semibold p-2'
               : 'text-black font-semibold'
           }
         >

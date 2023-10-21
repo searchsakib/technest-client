@@ -30,7 +30,7 @@ const InsideBrandDetails = ({ insideBrand }) => {
   }, [myProducts, brand_name]);
 
   return (
-    <div className="max-w-[1320px] mx-auto ">
+    <div className="max-w-[1320px] mx-auto mt-16">
       <div className="w-full mx-auto">
         {theProduct.length > 0 && ( // start the Carousel when the products are available
           <Carousel
