@@ -38,37 +38,44 @@ const DetailsProduct = () => {
   };
 
   return (
-    <div className="max-w-[1320px] mx-auto mt-[104px]">
-      <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 mt-20 px-6 md:px-10 lg:px-10 xl:px-0">
-        <div className="relative -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-          <img
-            className="w-full"
-            src={image}
-            alt="img-blur-shadow"
-            layout="fill"
-          />
-
-          <div className="absolute bottom-0 left-0 right-0 bg-[#0B0B0B80] opacity-60 h-[70px] md:h-[100px] lg:h-[130px]"></div>
-
-          <div
-            className="absolute lg:bottom-8 lg:left-9 md:bottom-4 md:left-7 
-        bottom-1 left-3 right-0 flex items-center justify-start h-16"
-          >
-            <button
-              onClick={handleAddToCart}
-              className=" text-white text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-orange-500 hover:text-orange-500 hover:bg-white hover:outline hover:outline-3 hover:outline-orange-500"
-            >
-              Add to Cart {price}$
-            </button>
-          </div>
-        </div>
-        <div className="mb-28">
-          <h5 className="mb-2 block text-[40px] text-[#0B0B0B] pt-14 pb-4 font-bold leading-snug tracking-normal antialiased capitalize">
-            {name}
-          </h5>
-          <p className="block text-base font-normal leading-[30px] antialiased text-[#0B0B0BB2]">
+    <div className="max-w-[1320px] mx-auto mt-[104px] mb-[104px] px-3">
+      <div className="card bg-base-100 shadow-xl max-w-[635px] text-[#3B3B3B] mx-auto">
+        <figure>
+          <img src={image} alt="pics" />
+        </figure>
+        <div className="card-body text-center bg-gradient-to-r from-indigo-200 to-blue-200">
+          <h2 className="card-title mx-auto font-bold text-2xl capitalize">
+            <span className="font-normal">
+              {' '}
+              <span className="text-orange-500 underline">Name: </span>{' '}
+            </span>{' '}
+            {name}{' '}
+          </h2>
+          <h2 className="card-title mx-auto font-bold text-xl capitalize pt-4">
+            <span className="font-normal">
+              {' '}
+              <span className="text-orange-500 underline">Price: </span>{' '}
+            </span>{' '}
+            {price}${' '}
+          </h2>
+          <p className="font-normal text-xl py-4 leading-8">
+            {' '}
+            <span className="text-orange-500 underline">
+              Description:{' '}
+            </span>{' '}
             {description}
           </p>
+
+          <div className="flex items-center justify-center gap-10">
+            <div className="card-actions justify-center mt-2">
+              <button
+                onClick={handleAddToCart}
+                className="btn bg-orange-500 text-white hover:text-orange-500 hover:bg-blue-50 hover:border-2 hover:border-orange-500"
+              >
+                Add to Cart {price}$
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
