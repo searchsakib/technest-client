@@ -10,8 +10,8 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-white outline font-bold p-2'
-              : 'text-orange-50'
+              ? 'text-black rounded-md outline font-semibold p-2'
+              : 'text-black font-semibold'
           }
         >
           Home
@@ -25,8 +25,8 @@ const Footer = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-white outline p-2 font-bold'
-              : 'text-orange-50'
+              ? 'text-black rounded-md outline font-semibold p-2'
+              : 'text-black font-semibold'
           }
         >
           Login
@@ -36,10 +36,10 @@ const Footer = () => {
   );
 
   return (
-    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14 bg-orange-500 rounded-t-2xl md:rounded-2xl lg:rounded-2xl">
+    <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14  rounded-t-2xl md:rounded-2xl lg:rounded-2xl">
       <div>
         <Link>
-          <h2 className="font-bold text-orange-500 bg-white text-2xl font-serif p-2 rounded-xl">
+          <h2 className="font-bold text-white bg-orange-500 text-2xl font-serif p-2 rounded-lg">
             TechNest
           </h2>
         </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <div>
         <p>
-          <small className="text-blue-50">© TechNest 2023</small>
+          <small className="text-black">© TechNest 2023</small>
         </p>
       </div>
     </footer>
