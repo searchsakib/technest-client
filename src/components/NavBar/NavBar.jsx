@@ -89,10 +89,12 @@ const NavBar = ({ toggleDarkMode }) => {
           Login
         </NavLink>
       </li>
-      <li className="pb-8 md:pb-0 lg:pb-0">
-        <button onClick={toggleDarkMode}>
-          <input type="checkbox" className="toggle toggle-md" />
-        </button>
+      <li>
+        <input
+          onClick={toggleDarkMode}
+          type="checkbox"
+          className="toggle toggle-md"
+        />
       </li>
     </>
   );

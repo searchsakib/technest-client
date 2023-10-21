@@ -8,6 +8,7 @@ const InsideBrandDetails = ({ insideBrand }) => {
 
   const [myProducts, setMyProducts] = useState([]);
   const [theProduct, setTheProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://technest-server.vercel.app/products')
@@ -15,8 +16,12 @@ const InsideBrandDetails = ({ insideBrand }) => {
       .then((data) => {
         console.log('Fetched data:', data); // Check if data is fetched correctly
         setMyProducts(data);
+        setIsLoading(false);
       })
-      .catch((error) => console.error('Error fetching data:', error)); // Check for any errors during the fetch
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -28,6 +33,14 @@ const InsideBrandDetails = ({ insideBrand }) => {
       setTheProduct(findProduct);
     }
   }, [myProducts, brand_name]);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center m-14 lg:m-[150px]">
+        <span className="loading loading-spinner loading-lg text-red-400"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-[1320px] mx-auto mt-16">
