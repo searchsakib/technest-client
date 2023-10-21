@@ -58,7 +58,7 @@ const DetailsProduct = () => {
               onClick={handleAddToCart}
               className=" text-white text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-orange-500"
             >
-              Add to Cart {price}
+              Add to Cart {price}$
             </button>
           </div>
         </div>
