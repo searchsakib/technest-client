@@ -10,7 +10,7 @@ const Brands = () => {
   }, []);
 
   return (
-    <div className="max-w-[1320px] mx-auto mt-[100px] mb-[100px] border-2 border-black py-[70px] px-7 md:px-16 lg:px-20 bg-[#CEC7C1]">
+    <div className="max-w-[1320px] mx-auto mt-[100px] mb-[100px] border-2 border-black py-[70px] px-7 md:px-16 lg:px-20 bg-gray-200">
       <div className="max-w-3xl mx-auto text-center pb-10">
         <h2 className="text-3xl font-extrabold sm:text-4xl text-black">
           Renowned Brands

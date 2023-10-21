@@ -67,7 +67,7 @@ const Register = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="pt-[60px] pb-[76px] bg-gray-100">
+      <div className="pt-[60px] pb-[76px] bg-[#F4F3F0]">
         <div className="mx-auto w-5/12 min-w-fit ">
           <h2 className="text-3xl font-medium my-5 text-center">
             Register Here
