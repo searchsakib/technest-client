@@ -2,7 +2,7 @@ import bannerPic from '/images/banner.jpg';
 
 const Banner = () => {
   return (
-    <div className="bg-black max-w-[1320px] mx-auto">
+    <div className="bg-black max-w-[1320px] mx-auto rounded-lg">
       <div className="container flex flex-col justify-center p-6 mx-auto lg:p-24 lg:flex-row lg:justify-between ">
         <div className="flex flex-col justify-center p-6 items-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left text-center text-orange-500">
           <h1 className="lg:text-6xl font-bold text-4xl px-10 lg:px-0 lg:leading-tight">
