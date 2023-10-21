@@ -162,6 +162,7 @@ const UpdateProduct = () => {
                   className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Image URL"
                   name="image"
+                  required
                 />
               </div>
               <div className="col-span-1 md:col-span-12 lg:col-span-12">
@@ -169,7 +170,6 @@ const UpdateProduct = () => {
                   type="submit"
                   className="btn btn-block hover:bg-orange-100 hover:outline hover:text-black bg-[#3B3B3B] text-white"
                   value="Submit"
-                  required
                 />
               </div>
             </div>
