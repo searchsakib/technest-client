@@ -63,7 +63,7 @@ const MyCart = () => {
     <div className="bg-[#F4F3F0] py-16">
       {isLoading ? (
         <div className="flex items-center justify-center m-14 lg:m-[150px]">
-          <span className="loading loading-ring loading-lg"></span>
+          <span className="loading loading-spinner loading-lg text-red-400"></span>
         </div>
       ) : (
         <div className="max-w-[1320px] mx-auto">
