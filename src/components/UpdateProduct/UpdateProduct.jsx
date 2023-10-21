@@ -90,13 +90,12 @@ const UpdateProduct = () => {
                   className="p-2 w-full"
                   name="brand"
                   defaultValue={brand}
-                  disabled
                 >
-                  <option value="samsung">Samsung (Fixed)</option>
-                  <option value="asus">Asus (Fixed)</option>
-                  <option value="apple">Apple (Fixed)</option>
-                  <option value="lenovo">Lenovo (Fixed)</option>
-                  <option value="google">Google (Fixed)</option>
+                  <option value="samsung">Samsung</option>
+                  <option value="asus">Asus</option>
+                  <option value="apple">Apple</option>
+                  <option value="lenovo">Lenovo</option>
+                  <option value="google">Google</option>
                 </select>
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
