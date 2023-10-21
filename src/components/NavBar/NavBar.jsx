@@ -37,7 +37,7 @@ const NavBar = () => {
               ? 'pending'
               : isActive
               ? 'text-orange-600 underline font-bold'
-              : ''
+              : 'text-black'
           }
         >
           Home
@@ -52,7 +52,7 @@ const NavBar = () => {
               ? 'pending'
               : isActive
               ? 'text-orange-600 underline font-bold'
-              : ''
+              : 'text-black'
           }
         >
           Add Product
@@ -67,7 +67,7 @@ const NavBar = () => {
               ? 'pending'
               : isActive
               ? 'text-orange-600 underline font-bold'
-              : ''
+              : 'text-black'
           }
         >
           My Cart
@@ -82,7 +82,7 @@ const NavBar = () => {
               ? 'pending'
               : isActive
               ? 'text-orange-600 underline font-bold'
-              : ''
+              : 'text-black'
           }
         >
           Login
@@ -109,15 +109,20 @@ const NavBar = () => {
             {photo ? <img src={photo} /> : <img src={userPic} />}
           </div>
         </label>
-        {name && <p> {name} </p>}
+        {name && <p className="text-black"> {name} </p>}
 
         {user ? (
-          <button onClick={handleSignOut} className="btn">
+          <button
+            onClick={handleSignOut}
+            className="btn bg-slate-500 hover:bg-black text-white"
+          >
             Log Out
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn">Login</button>
+            <button className="btn bg-slate-500 hover:bg-black text-white">
+              Login
+            </button>
           </Link>
         )}
       </div>

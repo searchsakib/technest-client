@@ -10,9 +10,11 @@ const Brands = () => {
   }, []);
 
   return (
-    <div className="max-w-[1320px] mx-auto mt-[100px] mb-[100px] border-2 border-black py-[70px] px-7 md:px-16 lg:px-20">
+    <div className="max-w-[1320px] mx-auto mt-[100px] mb-[100px] border-2 border-black py-[70px] px-7 md:px-16 lg:px-20 bg-slate-100">
       <div className="max-w-3xl mx-auto text-center pb-10">
-        <h2 className="text-3xl font-extrabold sm:text-4xl">Renowned Brands</h2>
+        <h2 className="text-3xl font-extrabold sm:text-4xl text-black">
+          Renowned Brands
+        </h2>
         <p className="mt-4 text-lg text-gray-700">
           We sell top-tier products from industry giants, redefining innovation
           and reliability for our customers
