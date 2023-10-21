@@ -49,7 +49,7 @@ const AddProduct = () => {
     form.reset();
   };
   return (
-    <div className="bg-[#F4F3F0] py-16 px-8 mb-[100px]">
+    <div className="bg-[#F4F3F0] py-16 px-8">
       <h2 className="text-3xl font-extrabold mb-12 text-[#3B3B3B] text-center">
         Add Product
       </h2>

@@ -41,7 +41,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className="bg-[#F4F3F0] py-16 mb-[100px]">
+    <div className="bg-[#F4F3F0] py-16">
       <div className="max-w-[1320px] mx-auto">
         <h2 className="text-3xl font-extrabold  text-[#3B3B3B] text-center">
           My Cart
