@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <div className="text-black max-w-[1320px] mx-auto  py-2 mb-[100px] bg-orange-200 rounded-lg">
+    <div className="text-black max-w-[1320px] mx-auto  py-2 mb-[100px] rounded-lg bg-gradient-to-r from-blue-300 to-indigo-300">
       <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
@@ -19,7 +19,7 @@ const Features = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               aria-hidden="true"
-              className="flex-shrink-0 w-6 h-6 text-violet-400"
+              className="flex-shrink-0 w-6 h-6 black"
             >
               <path
                 strokeLinecap="round"
@@ -46,7 +46,7 @@ const Features = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               aria-hidden="true"
-              className="flex-shrink-0 w-6 h-6 text-violet-400"
+              className="flex-shrink-0 w-6 h-6 text-black"
             >
               <path
                 strokeLinecap="round"
@@ -73,7 +73,7 @@ const Features = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               aria-hidden="true"
-              className="flex-shrink-0 w-6 h-6 text-violet-400"
+              className="flex-shrink-0 w-6 h-6 text-black"
             >
               <path
                 strokeLinecap="round"
@@ -99,7 +99,7 @@ const Features = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               aria-hidden="true"
-              className="flex-shrink-0 w-6 h-6 text-violet-400"
+              className="flex-shrink-0 w-6 h-6 text-black"
             >
               <path
                 strokeLinecap="round"

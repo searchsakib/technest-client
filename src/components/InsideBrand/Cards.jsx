@@ -9,7 +9,7 @@ const Cards = ({ myProduct }) => {
       <figure>
         <img src={image} alt="pics" />
       </figure>
-      <div className="card-body text-center bg-orange-100">
+      <div className="card-body text-center bg-gradient-to-r from-sky-200 to-purple-200">
         <h2 className="card-title mx-auto font-bold capitalize">
           <span className="font-normal">Name:</span> {name}{' '}
         </h2>

@@ -6,11 +6,11 @@ const MainLayout = () => {
   return (
     // data-theme="dark"
     <div>
-      <div className="bg-[#2C3F46]">
+      <div className="bg-blue-100">
         <NavBar></NavBar>
       </div>
       <Outlet></Outlet>
-      <div className="bg-[#2C3F46]">
+      <div className="bg-blue-100">
         <Footer></Footer>
       </div>
     </div>

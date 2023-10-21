@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
-    <section className="py-8 max-w-[1320px] mx-auto  text-black bg-orange-200 rounded-lg">
+    <section className="py-8 max-w-[1320px] mx-auto  text-black rounded-lg bg-gradient-to-r from-blue-300 to-red-200">
       <div className="max-w-3xl mx-auto text-center py-10">
         <h2 className="text-3xl font-extrabold sm:text-4xl px-6">Contact Us</h2>
         <p className="mt-4 text-lg text-gray-700 px-6">

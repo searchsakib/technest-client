@@ -48,8 +48,8 @@ const DetailsProduct = () => {
             layout="fill"
           />
 
-          <div className="absolute bottom-0 left-0 right-0 bg-orange-500 opacity-90 h-[70px] md:h-[140px] lg:h-[230px] hidden md:block"></div>
-          <div className="absolute bottom-0 left-0 right-0 bg-orange-500 opacity-90 h-[70px] md:hidden lg:hidden"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-violet-700 to-rose-700 opacity-90 h-[70px] md:h-[140px] lg:h-[230px] hidden md:block"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-violet-700 to-rose-700 opacity-90 h-[70px] md:hidden lg:hidden"></div>
 
           <div
             className="absolute lg:bottom-8 lg:left-0 md:bottom-4 md:left-0 
@@ -69,7 +69,7 @@ const DetailsProduct = () => {
                 </h5>
                 <button
                   onClick={handleAddToCart}
-                  className=" text-orange-600 font-semibold text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-white hover:bg-orange-800 hover:text-white"
+                  className=" text-blue-800 font-semibold text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-white hover:bg-orange-800 hover:text-white"
                 >
                   Add to Cart {price}$
                 </button>
