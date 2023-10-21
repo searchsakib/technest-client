@@ -4,7 +4,7 @@ import logo from '/images/logo.svg';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
-const NavBar = () => {
+const NavBar = ({ toggleDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
 
   const [name, setName] = useState(null);
@@ -75,7 +75,7 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li className="pb-8 md:pb-0 lg:pb-0">
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
@@ -88,6 +88,11 @@ const NavBar = () => {
         >
           Login
         </NavLink>
+      </li>
+      <li className="pb-8 md:pb-0 lg:pb-0">
+        <button onClick={toggleDarkMode}>
+          <input type="checkbox" className="toggle toggle-md" />
+        </button>
       </li>
     </>
   );
