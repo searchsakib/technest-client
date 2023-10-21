@@ -46,7 +46,7 @@ const MyCart = () => {
         <h2 className="text-3xl font-extrabold  text-[#3B3B3B] text-center">
           My Cart
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 px-5 md:px-5 lg:px-0 my-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 px-5 md:px-5 lg:px-0 my-16 text-[#3B3B3B]">
           {myCart.map((cart) => (
             <div key={cart._id}>
               <div className="card bg-base-100 shadow-xl ">
