@@ -39,7 +39,7 @@ const DetailsProduct = () => {
 
   return (
     <div className="max-w-[1320px] mx-auto mt-[104px]">
-      <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 mt-6 px-6 md:px-10 lg:px-10 xl:px-0 mb-20">
+      <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 mt-20 px-6 md:px-10 lg:px-10 xl:px-0">
         <div className="relative -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
           <img
             className="w-full"
@@ -48,41 +48,22 @@ const DetailsProduct = () => {
             layout="fill"
           />
 
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-violet-700 to-rose-700 opacity-90 h-[70px] md:h-[140px] lg:h-[230px] hidden md:block"></div>
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-violet-700 to-rose-700 opacity-90 h-[70px] md:hidden lg:hidden"></div>
+          <div className="absolute bottom-0 left-0 right-0 bg-[#0B0B0B80] opacity-60 h-[70px] md:h-[100px] lg:h-[130px]"></div>
 
           <div
-            className="absolute lg:bottom-8 lg:left-0 md:bottom-4 md:left-0 
-          bottom-1 left-3 right-0 flex items-center justify-start h-16 "
+            className="absolute lg:bottom-8 lg:left-9 md:bottom-4 md:left-7 
+        bottom-1 left-3 right-0 flex items-center justify-start h-16"
           >
-            {/* for smaller screen */}
             <button
               onClick={handleAddToCart}
-              className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium hover:bg-orange-800 hover:text-white"
+              className=" text-white text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-orange-500"
             >
-              Add to Cart {price}$
+              Add to Cart {price}
             </button>
-
-            <div className="p-10 mb-32 hidden md:block">
-              <div className="flex justify-between items-center">
-                <h5 className="mb-2 block text-3xl text-white pt-9 pb-2 font-bold leading-snug tracking-normal antialiased capitalize">
-                  {name}
-                </h5>
-                <button
-                  onClick={handleAddToCart}
-                  className=" text-blue-800 font-semibold text-xs md:text-lg lg:text-lg lg:px-[26px] lg:py-4 md:px-[20px] md:py-3 px-3 py-2 rounded shadow-md w-fit bg-white hover:bg-orange-800 hover:text-white"
-                >
-                  Add to Cart {price}$
-                </button>
-              </div>
-              <p className="block text-[10px]  lg:text-base font-medium leading-none lg:leading-[30px] antialiased text-white">
-                {description}
-              </p>
-            </div>
           </div>
         </div>
-        <div className="md:hidden lg:hidden">
-          <h5 className="block text-[25px] text-[#0B0B0B] pt-8 pb-1 font-bold leading-snug tracking-normal antialiased capitalize">
+        <div className="mb-28">
+          <h5 className="mb-2 block text-[40px] text-[#0B0B0B] pt-14 pb-4 font-bold leading-snug tracking-normal antialiased capitalize">
             {name}
           </h5>
           <p className="block text-base font-normal leading-[30px] antialiased text-[#0B0B0BB2]">
