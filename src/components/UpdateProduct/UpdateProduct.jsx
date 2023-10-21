@@ -56,7 +56,8 @@ const UpdateProduct = () => {
   return (
     <div className="bg-[#F4F3F0] py-16 px-8">
       <h2 className="text-3xl font-extrabold mb-12 text-[#3B3B3B] text-center">
-        Update Product : <span className="font-semibold"> {name} </span>
+        Update Product :{' '}
+        <span className="font-semibold capitalize"> {name} </span>
       </h2>
       <div>
         <div className="mx-auto max-w-xl">
@@ -85,14 +86,18 @@ const UpdateProduct = () => {
                 >
                   Brand Name
                 </label>
-                <input
-                  defaultValue={brand}
-                  type="text"
-                  className="bloc p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-                  placeholder="Brand Name"
+                <select
+                  className="p-2 w-full"
                   name="brand"
-                  required
-                />
+                  defaultValue={brand}
+                  disabled
+                >
+                  <option value="samsung">Samsung (Fixed)</option>
+                  <option value="asus">Asus (Fixed)</option>
+                  <option value="apple">Apple (Fixed)</option>
+                  <option value="lenovo">Lenovo (Fixed)</option>
+                  <option value="google">Google (Fixed)</option>
+                </select>
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label

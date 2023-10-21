@@ -79,13 +79,20 @@ const AddProduct = () => {
                 >
                   Brand Name
                 </label>
-                <input
+                <select className="p-2 w-full" name="brand">
+                  <option value="samsung">Samsung</option>
+                  <option value="asus">Asus</option>
+                  <option value="apple">Apple</option>
+                  <option value="lenovo">Lenovo</option>
+                  <option value="google">Google</option>
+                </select>
+                {/* <input
                   type="text"
                   className="bloc p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                   placeholder="Brand Name"
                   name="brand"
                   required
-                />
+                /> */}
               </div>
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label

@@ -55,6 +55,7 @@ const DetailsProduct = () => {
             className="absolute lg:bottom-8 lg:left-0 md:bottom-4 md:left-0 
           bottom-1 left-3 right-0 flex items-center justify-start h-16 "
           >
+            {/* for smaller screen */}
             <button
               onClick={handleAddToCart}
               className=" text-blue-800 text-xs md:hidden lg:hidden px-3 py-2 rounded shadow-md w-fit bg-white font-medium hover:bg-orange-800 hover:text-white"
