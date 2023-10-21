@@ -5,11 +5,11 @@ import Footer from '../components/Footer/Footer';
 const MainLayout = () => {
   return (
     <div>
-      <div className="border-b-[3px] border-black">
+      <div className="border-b-2 border-black">
         <NavBar></NavBar>
       </div>
       <Outlet></Outlet>
-      <div className="border-t-[3px] border-black">
+      <div className="border-t-2 border-black">
         <Footer></Footer>
       </div>
     </div>

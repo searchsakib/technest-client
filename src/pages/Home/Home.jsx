@@ -7,13 +7,13 @@ const Home = () => {
   return (
     <div className="pb-[100px] overflow-x-hidden">
       <Banner></Banner>
-      <div>
+      <div className="p-4 md:p-5 lg:p-0">
         <Brands></Brands>
       </div>
-      <div>
+      <div className="p-4 md:p-5 lg:p-0">
         <Features></Features>
       </div>
-      <div>
+      <div className="p-4 md:p-5 lg:p-0">
         <Contact></Contact>
       </div>
     </div>

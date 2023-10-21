@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <div className="outline text-black max-w-[1320px] mx-auto  py-2 mb-[100px]">
+    <div className="border-2 border-black text-black max-w-[1320px] mx-auto  py-2 mb-[100px]">
       <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
