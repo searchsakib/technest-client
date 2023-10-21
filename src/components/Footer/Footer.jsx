@@ -39,7 +39,7 @@ const Footer = () => {
     <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14">
       <div>
         <Link>
-          <h2 className="font-bold text-white bg-orange-500 text-2xl font-serif p-2 rounded-lg">
+          <h2 className="font-bold text-white bg-indigo-600 text-2xl font-serif p-2 rounded-lg">
             TechNest
           </h2>
         </Link>

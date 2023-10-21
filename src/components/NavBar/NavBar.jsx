@@ -36,7 +36,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-primary underline font-bold'
               : 'text-black'
           }
         >
@@ -51,7 +51,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-primary underline font-bold'
               : 'text-black'
           }
         >
@@ -66,7 +66,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-primary underline font-bold'
               : 'text-black'
           }
         >
@@ -81,7 +81,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-primary underline font-bold'
               : 'text-black'
           }
         >
@@ -95,7 +95,7 @@ const NavBar = () => {
     <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-[1320px] mx-auto py-12">
       <div>
         <Link>
-          <h2 className="font-bold bg-orange-500 text-2xl font-serif p-2 text-white rounded-lg">
+          <h2 className="font-bold bg-indigo-600 text-2xl font-serif p-2 text-white rounded-md">
             TechNest
           </h2>
         </Link>
@@ -114,13 +114,13 @@ const NavBar = () => {
         {user ? (
           <button
             onClick={handleSignOut}
-            className="btn bg-slate-500 hover:bg-black text-white"
+            className="btn bg-gray-100 hover:bg-gray-700 hover:text-white text-black outline-none border-none"
           >
             Log Out
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn bg-slate-500 hover:bg-black text-white">
+            <button className="btn bg-gray-100 hover:bg-gray-700 hover:text-white text-black outline-none border-none">
               Login
             </button>
           </Link>
