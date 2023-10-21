@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import logo from '/images/logo.svg';
 
 const Footer = () => {
   const links = (
@@ -39,9 +40,14 @@ const Footer = () => {
     <footer className="flex flex-col md:px-10 lg:px-10 xl:px-0 items-center justify-between  max-w-[1320px] mx-auto  pt-14 pb-14">
       <div>
         <Link>
-          <h2 className="font-bold text-white bg-indigo-600 text-2xl font-serif p-2 rounded-lg">
-            TechNest
-          </h2>
+          <div className="flex items-center justify-center">
+            <div className="w-12">
+              <img src={logo} alt="" />{' '}
+            </div>
+            <div className="font-bold bg-indigo-600 text-xl font-serif p-2 text-white rounded-sm">
+              TechNest
+            </div>
+          </div>
         </Link>
       </div>
       <div className="text-center mt-8 mb-8 ">

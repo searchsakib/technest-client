@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import userPic from '/images/user.png';
+import logo from '/images/logo.svg';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
@@ -95,9 +96,14 @@ const NavBar = () => {
     <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-[1320px] mx-auto py-12">
       <div>
         <Link>
-          <h2 className="font-bold bg-indigo-600 text-2xl font-serif p-2 text-white rounded-md">
-            TechNest
-          </h2>
+          <div className="flex items-center justify-center">
+            <div className="w-12">
+              <img src={logo} alt="" />{' '}
+            </div>
+            <div className="font-bold bg-indigo-600 text-xl font-serif p-2 text-white rounded-sm">
+              TechNest
+            </div>
+          </div>
         </Link>
       </div>
       <div className="text-center mt-9 md:mt-0 lg:mt-0 ">
